@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: CFS - Radio-Button Add-on
-Plugin URI: http://uproot.us/
+Plugin URI: http://customfieldsuite.com/
 Description: A radio-button field extension for Custom Field Suite
 Version: .1
 Author: Sho Doi
