@@ -2,7 +2,7 @@
 
 class cfs_radio extends cfs_field {
 
-	function __construct() {
+	function __construct( $parent = null ) {
 		$this->name = 'radio';
 		$this->label = __( 'ラジオボタン', 'cfs' );
 		$this->parent = $parent;
@@ -13,11 +13,11 @@ class cfs_radio extends cfs_field {
 		?>
 
 		<?php foreach ( $field->options['choices'] as $val => $label ) : ?>
+
 			<?php $val = ('{empty}' == $val) ? '' : $val; ?>
 
 			<?php $checked = in_array( $val, (array) $field->value ) ? ' checked="checked"' : ''; ?>
-
-			<input type='radio' name='<?php echo $field->input_name; ?>' value='<?php echo esc_attr( $val ); ?>'<?php echo $selected; ?> class="<?php echo $field->input_class; ?>"<?php echo $checked; ?>> <?php echo esc_attr( $label ); ?><br>
+			<input type='radio' name='<?php echo $field->input_name; ?>' value='<?php echo esc_attr( $val ); ?>' class="<?php echo $field->input_class; ?>"<?php echo $checked; ?>> <?php echo esc_attr( $label ); ?><br>
 		<?php endforeach; ?>
 
 		<?php
